@@ -1,0 +1,31 @@
+public class Selection_sort{
+    public void demo(){
+        List<Integer>Ion = new List<Integer>();
+        Ion.add(12);
+        Ion.add(22);
+        Ion.add(2);
+        Ion.add(9);
+        Ion.add(32);
+        
+            for(Integer i=0;i<Ion.size();i++)
+          {
+             Integer minindex = i;
+                 for(Integer j = i+1;j<Ion.size();j++)
+             {
+                 if(Ion[j]<Ion[minindex])
+                 {
+                     minindex = j;
+                 }
+             }
+              Integer temp = Ion[minindex];
+              Ion[minindex] = Ion[i];
+              Ion[i] = temp;
+          }
+        for(Integer k =0;k<Ion.size();k++)
+        {
+            System.debug(Ion[k]);
+        }
+    }
+}
+Selection_sort obj = new Selection_sort();
+obj.demo();
